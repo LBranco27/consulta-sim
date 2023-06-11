@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "articles#index"
+  resources :medics
+  resources :patients
 
   resources :articles do
     resources :comments
