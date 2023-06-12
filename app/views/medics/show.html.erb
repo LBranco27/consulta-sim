@@ -1,0 +1,57 @@
+<table border="2" align="center" bgcolor=#5f9ea0>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        Dados do Medico
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Nome:
+    </td>
+    <td>
+      <%= @medic.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      CPF:
+    </td>
+    <td>
+      <%= @medic.cpf %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      E-mail:
+    </td>
+    <td>
+      <%= @medic.email %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Especialidade:
+    </td>
+    <td>
+      <%= @medic.speciality %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      CRM:
+    </td>
+    <td>
+      <%= @medic.crm %>
+    </td>
+  </tr>
+</table>
+<br>
+<ul>
+  <li><%= link_to "Edit", edit_medic_path(@medic) %></li>
+  <li><%= link_to "Destroy", medic_path(@medic), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>

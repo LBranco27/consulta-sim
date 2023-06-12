@@ -33,6 +33,13 @@ class PatientsController < ApplicationController
   def show
     @patient = Patient.find(params[:id])
   end
+
+  def destroy
+    @patient = Patient.find(params[:id])
+    @patient.destroy
+
+    redirect_to root_path, status: :see_other
+  end
 end
 
 private

@@ -11,7 +11,7 @@ class MedicsController < ApplicationController
   def create
     @medic = Medic.new(medic_params)
     if @medic.save
-      redirect_to medics_path, notice: 'Medic cadastrado com sucesso.'
+      redirect_to @medic
     else
       render :new
     end
@@ -24,7 +24,7 @@ class MedicsController < ApplicationController
   def update
     @medic = Medic.find(params[:id])
     if @medic.update(medic_params)
-      redirect_to medics_path, notice: 'Medic atualizado com sucesso.'
+      redirect_to @medic
     else
       render :edit
     end
@@ -32,6 +32,13 @@ class MedicsController < ApplicationController
 
   def show
     @medic = Medic.find(params[:id])
+  end
+
+  def destroy
+    @medic = Medic.find(params[:id])
+    @medic.destroy
+
+    redirect_to root_path, status: :see_other
   end
 end
 
