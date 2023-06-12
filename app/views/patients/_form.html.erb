@@ -1,0 +1,74 @@
+<%= form_with model: patient do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> ocorreram durante o cadastro:</h2>
+      <ul>
+        <% patient.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"data de nascimento" %>
+    <%= form.date_field :birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <h2>Endereço</h2>
+
+  <div class="field">
+    <%= form.fields_for :address do |address_form| %>
+      <%= address_form.label :cep %>
+      <%= address_form.text_field :cep %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :address do |address_form| %>
+      <%= address_form.label :cidade %>
+      <%= address_form.text_field :city %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :address do |address_form| %>
+      <%= address_form.label :bairro %>
+      <%= address_form.text_field :zone %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :address do |address_form| %>
+      <%= address_form.label :logradouro %>
+      <%= address_form.text_field :street %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :address do |address_form| %>
+      <%= address_form.label :complemento %>
+      <%= address_form.text_field :complement %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

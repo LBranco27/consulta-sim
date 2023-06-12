@@ -1,0 +1,99 @@
+<table border="2" align="center" bgcolor=#5f9ea0>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        Dados do Paciente
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Nome:
+    </td>
+    <td>
+      <%= @patient.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      CPF:
+    </td>
+    <td>
+      <%= @patient.cpf %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      E-mail:
+    </td>
+    <td>
+      <%= @patient.email %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Data de Nascimento:
+    </td>
+    <td>
+      <%= @patient.birth %>
+    </td>
+  </tr>
+</table>
+<br>
+<table border="2" align="center" bgcolor=#5f9ea0>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        Endereço do Paciente
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Cidade:
+    </td>
+    <td>
+      <%= @patient.address.city %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Logradouro:
+    </td>
+    <td>
+      <%= @patient.address.street %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Bairro:
+    </td>
+    <td>
+      <%= @patient.address.zone %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      CEP:
+    </td>
+    <td>
+      <%= @patient.address.cep %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Complemento:
+    </td>
+    <td>
+      <%= @patient.address.complement %>
+    </td>
+  </tr>
+</table>
+
+<ul>
+  <li><%= link_to "Edit", edit_patient_path(@patient) %></li>
+  <li><%= link_to "Destroy", patient_path(@patient), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>

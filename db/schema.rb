@@ -53,7 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_11_205757) do
 
   create_table "patients", force: :cascade do |t|
     t.string "name"
-    t.string "birth"
+    t.date "birth"
     t.string "cpf"
     t.string "email"
     t.datetime "created_at", null: false

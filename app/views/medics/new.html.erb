@@ -1,0 +1,43 @@
+<h1>Cadastro de Médico</h1>
+
+<%= form_with model: @medic do |form| %>
+  <% if @medic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medic.errors.count, "erro") %> ocorreram durante o cadastro:</h2>
+      <ul>
+        <% @medic.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speciality %>
+    <%= form.text_field :speciality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crm %>
+    <%= form.text_field :crm %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar Médico" %>
+  </div>
+<% end %>
