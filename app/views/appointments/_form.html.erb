@@ -1,0 +1,17 @@
+<%= form_with model: [ @patient, @patient.appointment.build ] do |form| %>
+  <p>
+    <%= form.label :Data %><br>
+    <%= form.date_field :date %>
+  </p>
+  <p>
+    <%= form.label :Hora %><br>
+    <%= form.time_field :time %>
+  </p>
+  <p>
+    <%= form.label :Medico %><br>
+    <%= form.select :medic_id , options_for_select(Medic.all.pluck(:name, :id))%>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

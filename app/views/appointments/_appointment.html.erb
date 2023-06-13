@@ -1,0 +1,26 @@
+<table border="2" align="center" bgcolor=#5f9ea0>
+  <tr>
+    <td>
+      Hora da consulta:
+    </td>
+    <td>
+      <%= appointment.time.to_formatted_s(:time) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Data da consulta:
+    </td>
+    <td>
+      <%= appointment.date.strftime('%d/%m/%Y') %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Medico:
+    </td>
+    <td>
+      <%= appointment.medic.name %>
+    </td>
+  </tr>
+</table>
