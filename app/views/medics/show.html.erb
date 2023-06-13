@@ -1,49 +1,73 @@
-<table border="2" align="center" bgcolor=#5f9ea0>
-  <tr>
-    <td colspan="2">
-      <div align="center">
-        Dados do Medico
-      </div>
-    </td>
-  </tr>
+<table border="1" bgcolor=#daa520 align="center">
   <tr>
     <td>
-      Nome:
-    </td>
-    <td>
-      <%= @medic.name %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      CPF:
-    </td>
-    <td>
-      <%= @medic.cpf %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      E-mail:
-    </td>
-    <td>
-      <%= @medic.email %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Especialidade:
-    </td>
-    <td>
-      <%= @medic.speciality %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      CRM:
-    </td>
-    <td>
-      <%= @medic.crm %>
+      <table border="2" align="center" bgcolor=#5f9ea0>
+        <tr>
+          <td colspan="2">
+            <div align="center">
+              Dados do Medico
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Nome:
+          </td>
+          <td>
+            <%= @medic.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            CPF:
+          </td>
+          <td>
+            <%= @medic.cpf %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            E-mail:
+          </td>
+          <td>
+            <%= @medic.email %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Especialidade:
+          </td>
+          <td>
+            <%= @medic.speciality %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            CRM:
+          </td>
+          <td>
+            <%= @medic.crm %>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <table border="2" align="center" bgcolor=#5f9ea0>
+        <tr>
+          <td colspan="2">
+            <div align="center">
+              Consultas
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= render @medic.appointments %>
+          </td>
+        </tr>
+        <tr>
+      </table>
     </td>
   </tr>
 </table>
