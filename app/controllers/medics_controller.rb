@@ -13,7 +13,7 @@ class MedicsController < ApplicationController
     if @medic.save
       redirect_to @medic
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -26,7 +26,7 @@ class MedicsController < ApplicationController
     if @medic.update(medic_params)
       redirect_to @medic
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

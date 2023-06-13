@@ -9,66 +9,100 @@
       </ul>
     </div>
   <% end %>
+  <table border="1" align="center" bgcolor="#6495ed">
+    <tr>
+      <td>
+        <table border="2" align="center" bgcolor="#6495ed">
+          <tr>
+            <td>
+              <%= form.label :nome %>
+            </td>
+            <td>
+              <%= form.text_field :name %>
+            </td>
+          </tr>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :name %>
-  </div>
+          <tr>
+            <td>
+              <%= form.label :"data de nascimento" %>
+            </td>
+            <td>
+              <%= form.date_field :birth %>
+            </td>
+          </tr>
 
-  <div class="field">
-    <%= form.label :"data de nascimento" %>
-    <%= form.date_field :birth %>
-  </div>
+          <tr>
+            <td>
+              <%= form.label "CPF (apenas números)" %>
+            </td>
+            <td>
+              <%= form.text_field :cpf %>
+            </td>
+          </tr>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-
-  <h2>Endereço</h2>
-
-  <div class="field">
-    <%= form.fields_for :address do |address_form| %>
-      <%= address_form.label :cep %>
-      <%= address_form.text_field :cep %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= form.fields_for :address do |address_form| %>
-      <%= address_form.label :cidade %>
-      <%= address_form.text_field :city %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= form.fields_for :address do |address_form| %>
-      <%= address_form.label :bairro %>
-      <%= address_form.text_field :zone %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= form.fields_for :address do |address_form| %>
-      <%= address_form.label :logradouro %>
-      <%= address_form.text_field :street %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= form.fields_for :address do |address_form| %>
-      <%= address_form.label :complemento %>
-      <%= address_form.text_field :complement %>
-    <% end %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-
+          <tr>
+            <td>
+              <%= form.label :email %>
+            </td>
+            <td>
+              <%= form.email_field :email %>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table border="2" align="center" bgcolor="#6495ed">
+          <tr>
+            <%= form.fields_for :address do |address_form| %>
+              <td>
+                <%= address_form.label "CEP (apenas números)" %>
+              </td>
+              <td>
+                <%= address_form.text_field :cep %>
+              </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= address_form.label :cidade %>
+                </td>
+                <td>
+                  <%= address_form.text_field :city %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= address_form.label :bairro %>
+                </td>
+                <td>
+                  <%= address_form.text_field :zone %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= address_form.label :logradouro %>
+                </td>
+                <td>
+                  <%= address_form.text_field :street %>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <%= address_form.label :complemento %>
+                </td>
+                <td>
+                  <%= address_form.text_field :complement %>
+                </td>
+              </tr>
+              </table>
+            <% end %>
+    <tr>
+      <td colspan="2">
+        <div align="center">
+          <%= form.submit %>
+        </div>
+      </td>
+    </tr>
+    </td>
+    </tr>
+  </table>
 <% end %>
