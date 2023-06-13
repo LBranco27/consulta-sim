@@ -135,11 +135,19 @@
     </td>
   </tr>
 </table>
-
-<ul>
-  <li><%= link_to "Editar", edit_patient_path(@patient) %></li>
-  <li><%= link_to "Deletar", patient_path(@patient), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %></li>
-</ul>
+<br>
+<table border="2" align="center" bgcolor="#228b22">
+  <tr>
+    <td>
+      <%= link_to "Editar", edit_patient_path(@patient) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= link_to "Deletar", patient_path(@patient), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </td>
+  </tr>
+</table>

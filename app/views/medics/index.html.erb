@@ -1,3 +1,14 @@
-<% @medic.each do |medic| %>
-  <li><%= medic.name %></li>
-<% end %>
+<table border="2" align="center" bgcolor="#228b22">
+  <tr>
+    <td colspan="2">
+      Médicos
+    </td>
+  </tr>
+  <% @medic.each do |medic| %>
+    <tr>
+      <td>
+        <%= link_to medic.name, medic %>
+      </td>
+    </tr>
+  <% end %>
+</table>

@@ -72,10 +72,19 @@
   </tr>
 </table>
 <br>
-<ul>
-  <li><%= link_to "Edit", edit_medic_path(@medic) %></li>
-  <li><%= link_to "Destroy", medic_path(@medic), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %></li>
-</ul>
+
+<table border="2" align="center" bgcolor="#228b22">
+  <tr>
+    <td>
+      <%= link_to "Edit", edit_medic_path(@medic) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= link_to "Destroy", medic_path(@medic), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </td>
+  </tr>
+</table>
