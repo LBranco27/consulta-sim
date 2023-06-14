@@ -139,15 +139,33 @@
 <table border="2" align="center" bgcolor="#228b22">
   <tr>
     <td>
-      <%= link_to "Editar", edit_patient_path(@patient) %>
+      <table>
+        <tr>
+          <td>
+            <%= link_to "Editar", edit_patient_path(@patient) %>
+          </td>
+          <td>
+            <%= image_tag 'notebook.gif' %>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
   <tr>
     <td>
-      <%= link_to "Deletar", patient_path(@patient), data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-      } %>
+      <table>
+        <tr>
+          <td>
+            <%= link_to "Deletar", patient_path(@patient), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Tem certeza?"
+            } %>
+          </td>
+          <td>
+            <%= image_tag 'RedX.gif' %>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </table>

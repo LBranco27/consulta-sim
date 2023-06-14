@@ -1,17 +1,35 @@
 <table border="2" align="center" bgcolor="#228b22">
   <tr>
     <td>
-      Paciente
+      <table>
+        <tr>
+          <td>
+            Paciente
+          </td>
+          <td>
+            <%= image_tag 'man_with_cane.gif' %>
+          </td>
+        </tr>
+      </table>
     </td>
     <td>
-      Medico
+      <table>
+        <tr>
+          <td>
+            Medico
+          </td>
+          <td>
+            <%= image_tag 'doctor.gif' %>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
   <tr>
     <td>
       <%= link_to "Criar", new_patient_path %>
     </td>
-    <td>
+    <td class="medic">
       <%= link_to "Criar", new_medic_path %>
     </td>
   </tr>
@@ -26,7 +44,7 @@
   <tr>
     <td colspan="2">
       <div align="center">
-        asdsad
+        <%= image_tag 'medicine.gif' %>
       </div>
     </td>
   </tr>
