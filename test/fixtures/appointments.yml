@@ -4,8 +4,16 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+one:
+  date: Date.new(2027, 7, 27)
+  time: "16:16"
+  medic: one
+  patient: one
+
+two:
+
+  date: Date.new(2077, 7, 27)
+  time: "03:27"
+  medic: two
+  patient: two

@@ -1,7 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: testname1
+  birth: Date.new(1927, 7, 27)
+  cpf: 12345678901
   email: MyString
 
 two:
+  name: testname2
+  birth: Date.new(1997, 7, 27)
+  cpf: 12345678902
   email: MyString

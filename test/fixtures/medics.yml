@@ -1,9 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: nametest
+  cpf: 12345678901
+  email: email@email.com
   speciality: MyString
   crm: MyString
 
 two:
+  name: nametest
+  cpf: 12345678902
+  email: email@email.com
   speciality: MyString
   crm: MyString
