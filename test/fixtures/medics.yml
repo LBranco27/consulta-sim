@@ -5,11 +5,11 @@ one:
   cpf: 12345678901
   email: email@email.com
   speciality: MyString
-  crm: MyString
+  crm: 123123
 
 two:
   name: nametest
   cpf: 12345678902
   email: email@email.com
   speciality: MyString
-  crm: MyString
+  crm: 124129123
