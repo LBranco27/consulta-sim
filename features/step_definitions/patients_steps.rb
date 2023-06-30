@@ -30,8 +30,8 @@ Given('Open the patient page') do
   visit patient_path(patient)
 end
 
-When('I click on the {string} link') do |string|
-  click_on string
+When('I click on the {delete} link') do |delete|
+  click_on delete
 end
 
 Then('I see that this patient was deleted') do
