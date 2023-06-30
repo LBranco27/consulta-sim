@@ -11,5 +11,5 @@ Feature: patient
 
   Scenario: Remove a patient
     Given Open the patient page
-    When I click on the 'deletar' link
+    When I click on the 'Deletar' link
     Then I see that this patient was deleted
