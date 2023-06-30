@@ -8,6 +8,8 @@ ruby "3.1.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'cucumber'
+
 #activestorage
 gem 'activestorage', "~> 7.0.2.2"
 gem 'actionmailer'
@@ -69,6 +71,9 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not mandatory, but highly recommended
+  gem 'database_cleaner'
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
