@@ -1,0 +1,51 @@
+<table border="2" align="center" bgcolor="#228b22">
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Paciente
+          </td>
+          <td>
+            <%= image_tag 'man_with_cane.gif' %>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            Medico
+          </td>
+          <td>
+            <%= image_tag 'doctor.gif' %>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= link_to "Criar", new_patient_path %>
+    </td>
+    <td class="medic">
+      <%= link_to "Criar", new_medic_path %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= link_to "Listar Todos", patients_url %>
+    </td>
+    <td>
+      <%= link_to "Listar Todos", medics_path %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        <%= image_tag 'medicine.gif' %>
+      </div>
+    </td>
+  </tr>
+</table>
